@@ -1,0 +1,95 @@
+main {
+    background-color: #fffdfd; /* Black background */
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgb(237, 233, 233); /* White shadow for contrast */
+    height: 100%;
+    overflow-y: auto;
+    display: grid;
+    gap: 2rem;
+    color: #ececec; /* Red text color */
+  }
+  
+  .book-card {
+    border-radius: 1rem;
+    padding: 0.75rem;
+    box-shadow: 0 4px 6px rgb(255, 255, 255); /* White shadow for contrast */
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for hover effect */
+  }
+  
+  .book-card:hover {
+    transform: translateY(-5px); /* Move slightly up on hover */
+    box-shadow: 0 8px 12px rgba(255, 255, 255, 0.2); /* Increase shadow on hover */
+  }
+  
+  .book-card__image__container {
+    height: 12rem;
+    border-radius: 1rem;
+    overflow: hidden; /* Hide image overflow */
+    transition: transform 0.3s ease; /* Add transition for hover effect */
+  }
+  
+  .book-card__image__container:hover {
+    transform: scale(1.05); /* Slightly zoom in on hover */
+  }
+  
+  .book-card__image {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+  }
+  
+  
+  .book-card__details {
+    padding: 0.5rem 0;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+  
+  .book-card__details__information {
+    font-size: 1.25rem;
+    color: #000000; /* Red text color */
+  }
+  
+  .button-container {
+    margin-top: auto;
+    padding-top: 1rem;
+  }
+  
+  .button-borrow {
+    background-color: #58b144; /* Red background */
+    color: #000000; /* White text */
+    font-size: 1.25rem;
+    padding: 0.25rem 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease; /* Add transition for hover effect */
+    margin:3px;
+  }
+  
+  .button-borrow:hover {
+    background-color: #e64343; /* Darker red on hover */
+  }
+  
+  @media (max-width: 767px) {
+    main {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (min-width: 768px) and (max-width: 1023px) {
+    main {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    main {
+      grid-template-columns: repeat(5, 1fr);
+    }
+  }
+  
